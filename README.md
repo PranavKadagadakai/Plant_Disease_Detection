@@ -1,108 +1,220 @@
-# Plant Disease Detection
+# Plant Disease Detection (Full Stack)
 
-A PyTorch-based deep learning project for classifying plant diseases using transfer learning with ResNet18.
+A full-stack AI application for detecting plant diseases using deep learning. The system includes a **PyTorch-based model**, a **FastAPI backend**, and a **React SPA frontend** for training, evaluation, and prediction with visualization support.
 
-## Overview
+---
 
-This project uses a pre-trained ResNet18 model fine-tuned on the PlantVillage dataset to classify plant diseases across three crop types (pepper, potato, and tomato) with 15 different classes including healthy plants.
+# 1. Overview
 
-## Dataset
+This project uses a **ResNet18 transfer learning model** trained on the PlantVillage dataset to classify plant diseases. It has been extended into a complete system with:
 
-The PlantVillage dataset contains images organized into 15 classes:
-- **Pepper**: Bacterial spot, healthy
-- **Potato**: Early blight, healthy, late blight
-- **Tomato**: 9 disease classes including bacterial spot, early/late blight, mosaic virus, yellow leaf curl virus, etc.
+* Fully implemented FastAPI backend (no script reuse)
+* React SPA frontend with routing
+* Image upload + prediction
+* Training and evaluation APIs
+* Confusion matrix visualization (image rendering)
 
-## Project Structure
+---
+
+# 2. Features
+
+## Machine Learning
+
+* Transfer learning using ResNet18
+* 15-class classification
+* Train / Evaluate / Predict pipelines
+* Metrics: accuracy, precision, recall, F1
+
+## Backend (FastAPI)
+
+* Re-implemented ML pipeline (no subprocess usage)
+* `/train` → Train model
+* `/evaluate` → Evaluate model + confusion matrix image
+* `/predict` → Predict disease + confidence + top-k
+
+## Frontend (React SPA)
+
+* Multi-page routing (Train / Evaluate / Predict)
+* Centered responsive UI
+* Dark mode (default)
+* Minimal design with orange primary theme
+* Image preview + prediction results
+* Confusion matrix full-width visualization
+
+---
+
+# 3. Dataset
+
+The PlantVillage dataset contains 15 classes:
+
+* Pepper: bacterial spot, healthy
+* Potato: early blight, late blight, healthy
+* Tomato: multiple diseases + healthy
+
+---
+
+# 4. Project Structure
 
 ```
-├── model.py                 # ResNet18 model definition
-├── train.py                 # Training script
-├── evaluate.py              # Evaluation and metrics
-├── predict.py               # Single image prediction
-├── plant_disease_model.pth  # Saved model weights
-├── sample_leaf.jpg          # Sample image for testing
-├── PlantVillage/            # Dataset directory
-├── splits/                  # Train/val/test indices
-└── plots/                   # Generated visualizations
+project/
+├── backend/
+│   ├── main.py
+│   ├── config.py
+│   ├── models/
+│   ├── services/
+│   ├── utils/
+│   └── routes/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── api/
+│   │   └── styles/
+│
+├── PlantVillage/
+├── plant_disease_model.pth
 ```
 
-## Requirements
+---
 
-- Python >= 3.13
-- PyTorch
-- torchvision
-- See `pyproject.toml` for full dependencies
+# 5. Requirements
 
-## Setup
+## Backend
 
-Using `uv` (recommended):
+* Python >= 3.10
+* PyTorch
+* torchvision
+* FastAPI
+* matplotlib, seaborn, sklearn
 
-```bash
-uv sync
-```
+## Frontend
 
-Or with pip:
+* Node.js >= 18
+* React + Vite
+* axios
+* react-router-dom
+
+---
+
+# 6. Setup Instructions
+
+## Backend
 
 ```bash
 pip install -r requirements.txt
+uvicorn backend.main:app --reload
 ```
 
-## Usage
+Runs at:
 
-### Training
+```
+http://localhost:8000
+```
 
-Train the model on the PlantVillage dataset:
+---
+
+## Frontend
 
 ```bash
-python train.py
+cd frontend
+npm install
+npm run dev
 ```
 
-This will:
-- Split data into 70% train, 15% validation, 15% test
-- Train for 10 epochs (default)
-- Save the model to `plant_disease_model.pth`
-- Save split indices to `splits/` for reproducibility
+Runs at:
 
-### Evaluation
-
-Evaluate the trained model on the test set:
-
-```bash
-python evaluate.py
+```
+http://localhost:5173
 ```
 
-Outputs accuracy, classification report, and confusion matrix visualization.
+---
 
-### Prediction
+# 7. Usage
 
-Predict the disease class for a single image:
+## Train
 
-```bash
-python predict.py
-```
+* UI → Train page → click Train
+* API → POST `/train`
 
-Edit `IMAGE_PATH` in the script to change the input image.
+## Evaluate
 
-## Model Architecture
+* UI → Evaluate page
+* Shows metrics + confusion matrix image
+* API → GET `/evaluate`
 
-- **Base Model**: ResNet18 (pre-trained on ImageNet)
-- **Modification**: Fully connected layer replaced for 15-class classification
-- **Training Strategy**: Transfer learning with frozen base layers
-- **Optimizer**: Adam (training only the classifier)
-- **Loss**: CrossEntropyLoss
+## Predict
 
-## Results
+* UI → Upload image → Predict
+* API → POST `/predict`
 
-The model achieves competitive accuracy on the PlantVillage test set. Run `evaluate.py` to see detailed metrics including:
-- Overall accuracy
-- Per-class precision, recall, and F1-score
-- Confusion matrix heatmap
+---
 
-## Development
+# 8. API Responses
 
-See `AGENTS.md` for coding guidelines and project conventions.
+## Train
 
-## License
+* loss, accuracy, curves
+
+## Evaluate
+
+* accuracy, precision, recall, f1
+* confusion_matrix_image (base64)
+
+## Predict
+
+* class_index
+* class_name
+* confidence
+* top_k predictions
+
+---
+
+# 9. Model Architecture
+
+* ResNet18 (ImageNet pretrained)
+* Frozen backbone
+* Custom classifier head
+* CrossEntropyLoss + Adam
+
+---
+
+# 10. UI Highlights
+
+* Dark mode default
+* Orange primary actions
+* Green for success states
+* Clean card-based layout
+* Full-width confusion matrix visualization
+
+---
+
+# 11. Engineering Decisions
+
+* Reimplemented backend logic instead of reusing scripts
+* Global model loading for performance
+* Base64 image transfer for confusion matrix (stateless)
+* React Router for multi-page navigation
+
+---
+
+# 12. Known Limitations
+
+* Training is synchronous (blocking)
+* No persistent dataset split
+* Confusion matrix may be large for many classes
+
+---
+
+# 13. Future Improvements
+
+* Async training (Celery / background tasks)
+* Interactive confusion matrix (Plotly)
+* Model versioning
+* Deployment (Docker + cloud)
+
+---
+
+# 14. License
 
 [Add your license information here]
