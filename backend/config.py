@@ -1,6 +1,6 @@
 import torch
 
-DATA_DIR = "PlantVillage"
+DATA_DIR = "Dataset"
 MODEL_PATH = "models/plant_disease_model.pth"
 
 BATCH_SIZE = 32

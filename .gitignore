@@ -33,3 +33,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+backend/models/plant_disease_model.pth
+backend/Dataset/**
