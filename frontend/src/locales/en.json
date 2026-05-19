@@ -1,0 +1,44 @@
+{
+  "appTitle": "Plant Disease Detection",
+
+  "train": "Train",
+  "evaluate": "Evaluate",
+  "detect": "Detect",
+
+  "trainModel": "Train Model",
+  "training": "Training...",
+  "errorTraining": "Error during training",
+
+  "evaluateModel": "Evaluate Model",
+  "evaluating": "Evaluating...",
+  "evaluationFailed": "Evaluation failed",
+
+  "detectDisease": "Detect Disease",
+  "detecting": "Detecting...",
+  "plantDiseaseDetection": "Plant Disease Detection",
+
+  "theme": "Theme",
+  "language": "Language",
+
+  "light": "Light",
+  "dark": "Dark",
+  "system": "System",
+
+  "detectionResult": "Detection Result",
+  "classIndex": "Class Index",
+  "rawClass": "Raw Class",
+  "confidence": "Confidence",
+
+  "lowConfidenceWarning": "Low confidence prediction. Verify manually before treatment.",
+
+  "diseaseName": "Disease Name",
+  "topPredictions": "Top Predictions",
+  "treatmentRecommendations": "Treatment Recommendations",
+
+  "organic": "Organic",
+  "chemical": "Chemical",
+  "cultural": "Cultural",
+
+  "confusionMatrix": "Confusion Matrix",
+  "download": "Download"
+}

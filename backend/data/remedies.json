@@ -1,0 +1,401 @@
+{
+  "generic_fallback": {
+    "display_name": {
+      "en": "Unknown Plant Condition",
+      "hi": "अज्ञात पौधे की स्थिति",
+      "kn": "ಅಪರಿಚಿತ ಸಸ್ಯ ಸ್ಥಿತಿ"
+    },
+    "remedies": {
+      "en": {
+        "organic": "Isolate the affected plant and monitor symptoms carefully.",
+        "chemical": "Consult a certified agricultural expert before applying chemicals.",
+        "cultural": "Maintain proper irrigation and avoid overwatering."
+      },
+      "hi": {
+        "organic": "प्रभावित पौधे को अलग रखें और लक्षणों की निगरानी करें।",
+        "chemical": "रसायनों का उपयोग करने से पहले कृषि विशेषज्ञ से परामर्श करें।",
+        "cultural": "सही सिंचाई बनाए रखें और अत्यधिक पानी से बचें।"
+      },
+      "kn": {
+        "organic": "ಬಾಧಿತ ಸಸ್ಯವನ್ನು ಬೇರ್ಪಡಿಸಿ ಮತ್ತು ಲಕ್ಷಣಗಳನ್ನು ಗಮನಿಸಿ.",
+        "chemical": "ರಾಸಾಯನಿಕ ಬಳಕೆಗೆ ಮೊದಲು ಕೃಷಿ ತಜ್ಞರನ್ನು ಸಂಪರ್ಕಿಸಿ.",
+        "cultural": "ಸರಿಯಾದ ನೀರಾವರಿ ಕಾಪಾಡಿ ಮತ್ತು ಹೆಚ್ಚು ನೀರು ಹಾಕಬೇಡಿ."
+      }
+    }
+  },
+
+  "pepper_bell_bacterial_spot": {
+    "display_name": {
+      "en": "Pepper Bell: Bacterial Spot",
+      "hi": "शिमला मिर्च: बैक्टीरियल स्पॉट",
+      "kn": "ಕ್ಯಾಪ್ಸಿಕಂ: ಬ್ಯಾಕ್ಟೀರಿಯಲ್ ಸ್ಪಾಟ್"
+    },
+    "remedies": {
+      "en": {
+        "organic": "Use copper-based organic bactericides and neem oil sprays weekly.",
+        "chemical": "Apply Copper Hydroxide or Streptomycin sprays as recommended.",
+        "cultural": "Avoid working with wet plants and remove infected leaves immediately."
+      },
+      "hi": {
+        "organic": "तांबा आधारित जैविक बैक्टीरिसाइड और नीम तेल का साप्ताहिक उपयोग करें।",
+        "chemical": "कॉपर हाइड्रॉक्साइड या स्ट्रेप्टोमाइसिन स्प्रे का उपयोग करें।",
+        "cultural": "गीले पौधों को छूने से बचें और संक्रमित पत्तियों को तुरंत हटाएं।"
+      },
+      "kn": {
+        "organic": "ತಾಮ್ರ ಆಧಾರಿತ ಸಾವಯವ ಬ್ಯಾಕ್ಟೀರಿಯಾ ನಾಶಕ ಮತ್ತು ಬೇವಿನ ಎಣ್ಣೆ ಸಿಂಪಡಿಸಿ.",
+        "chemical": "ಕಾಪರ್ ಹೈಡ್ರಾಕ್ಸೈಡ್ ಅಥವಾ ಸ್ಟ್ರೆಪ್ಟೊಮೈಸಿನ್ ಸಿಂಪಡಣೆ ಮಾಡಿ.",
+        "cultural": "ಒದ್ದೆಯಾದ ಸಸ್ಯಗಳನ್ನು ಮುಟ್ಟಬೇಡಿ ಮತ್ತು ಸೋಂಕಿತ ಎಲೆಗಳನ್ನು ತೆಗೆದುಹಾಕಿ."
+      }
+    }
+  },
+
+  "pepper_bell_healthy": {
+    "display_name": {
+      "en": "Pepper Bell: Healthy",
+      "hi": "शिमला मिर्च: स्वस्थ",
+      "kn": "ಕ್ಯಾಪ್ಸಿಕಂ: ಆರೋಗ್ಯಕರ"
+    },
+    "remedies": {
+      "en": {
+        "organic": "Continue using compost and balanced organic fertilizers.",
+        "chemical": "No chemical treatment required for healthy plants.",
+        "cultural": "Maintain regular watering, sunlight exposure, and field sanitation."
+      },
+      "hi": {
+        "organic": "कम्पोस्ट और संतुलित जैविक उर्वरकों का उपयोग जारी रखें।",
+        "chemical": "स्वस्थ पौधों के लिए किसी रासायनिक उपचार की आवश्यकता नहीं है।",
+        "cultural": "नियमित सिंचाई, धूप और खेत की सफाई बनाए रखें।"
+      },
+      "kn": {
+        "organic": "ಕಾಂಪೋಸ್ಟ್ ಮತ್ತು ಸಮತೋಲನಿತ ಸಾವಯವ ಗೊಬ್ಬರ ಬಳಕೆ ಮುಂದುವರಿಸಿ.",
+        "chemical": "ಆರೋಗ್ಯಕರ ಸಸ್ಯಗಳಿಗೆ ರಾಸಾಯನಿಕ ಚಿಕಿತ್ಸೆ ಅಗತ್ಯವಿಲ್ಲ.",
+        "cultural": "ನಿಯಮಿತ ನೀರಾವರಿ, ಸೂರ್ಯನ ಬೆಳಕು ಮತ್ತು ಹೊಲದ ಸ್ವಚ್ಛತೆ ಕಾಪಾಡಿ."
+      }
+    }
+  },
+
+  "potato_early_blight": {
+    "display_name": {
+      "en": "Potato: Early Blight",
+      "hi": "आलू: प्रारंभिक झुलसा रोग",
+      "kn": "ಆಲೂಗಡ್ಡೆ: ಆರಂಭಿಕ ಬ್ಲೈಟ್"
+    },
+    "remedies": {
+      "en": {
+        "organic": "Apply neem oil or Bacillus subtilis bio-fungicides regularly.",
+        "chemical": "Use Mancozeb or Chlorothalonil fungicides as directed.",
+        "cultural": "Rotate crops yearly and remove infected debris from the field."
+      },
+      "hi": {
+        "organic": "नीम तेल या बैसिलस सब्टिलिस जैविक कवकनाशी का उपयोग करें।",
+        "chemical": "मैंकोजेब या क्लोरोथैलोनिल कवकनाशी का उपयोग करें।",
+        "cultural": "फसल चक्र अपनाएं और संक्रमित अवशेष हटाएं।"
+      },
+      "kn": {
+        "organic": "ಬೇವಿನ ಎಣ್ಣೆ ಅಥವಾ ಬ್ಯಾಸಿಲ್ಲಸ್ ಸಬ್ಟಿಲಿಸ್ ಶಿಲೀಂಧ್ರನಾಶಕ ಬಳಸಿ.",
+        "chemical": "ಮ್ಯಾಂಕೋಜೆಬ್ ಅಥವಾ ಕ್ಲೋರೋಥಲೋನಿಲ್ ಬಳಸಿ.",
+        "cultural": "ಬೆಳೆ ಪರಿವರ್ತನೆ ಮಾಡಿ ಮತ್ತು ಸೋಂಕಿತ ಅವಶೇಷ ತೆಗೆದುಹಾಕಿ."
+      }
+    }
+  },
+
+  "potato_healthy": {
+    "display_name": {
+      "en": "Potato: Healthy",
+      "hi": "आलू: स्वस्थ",
+      "kn": "ಆಲೂಗಡ್ಡೆ: ಆರೋಗ್ಯಕರ"
+    },
+    "remedies": {
+      "en": {
+        "organic": "Use organic compost and maintain healthy soil nutrients.",
+        "chemical": "No chemical treatment is required.",
+        "cultural": "Ensure proper irrigation and monitor for pests regularly."
+      },
+      "hi": {
+        "organic": "जैविक कम्पोस्ट का उपयोग करें और मिट्टी के पोषक तत्व बनाए रखें।",
+        "chemical": "किसी रासायनिक उपचार की आवश्यकता नहीं है।",
+        "cultural": "सही सिंचाई करें और नियमित रूप से कीटों की निगरानी करें।"
+      },
+      "kn": {
+        "organic": "ಸಾವಯವ ಕಾಂಪೋಸ್ಟ್ ಬಳಸಿ ಮತ್ತು ಮಣ್ಣಿನ ಪೋಷಕಾಂಶ ಕಾಪಾಡಿ.",
+        "chemical": "ರಾಸಾಯನಿಕ ಚಿಕಿತ್ಸೆ ಅಗತ್ಯವಿಲ್ಲ.",
+        "cultural": "ಸರಿಯಾದ ನೀರಾವರಿ ಮಾಡಿ ಮತ್ತು ಕೀಟಗಳನ್ನು ಗಮನಿಸಿ."
+      }
+    }
+  },
+
+  "potato_late_blight": {
+    "display_name": {
+      "en": "Potato: Late Blight",
+      "hi": "आलू: पछेती झुलसा रोग",
+      "kn": "ಆಲೂಗಡ್ಡೆ: ಲೇಟ್ ಬ್ಲೈಟ್"
+    },
+    "remedies": {
+      "en": {
+        "organic": "Use copper fungicides and neem oil during early infection stages.",
+        "chemical": "Apply Metalaxyl or Mancozeb sprays as per guidelines.",
+        "cultural": "Avoid excess moisture and improve field drainage."
+      },
+      "hi": {
+        "organic": "प्रारंभिक अवस्था में तांबा आधारित कवकनाशी और नीम तेल का उपयोग करें।",
+        "chemical": "मेटालेक्सिल या मैंकोजेब स्प्रे करें।",
+        "cultural": "अधिक नमी से बचें और खेत की जल निकासी सुधारें।"
+      },
+      "kn": {
+        "organic": "ಆರಂಭಿಕ ಹಂತದಲ್ಲಿ ತಾಮ್ರ ಆಧಾರಿತ ಶಿಲೀಂಧ್ರನಾಶಕ ಮತ್ತು ಬೇವಿನ ಎಣ್ಣೆ ಬಳಸಿ.",
+        "chemical": "ಮೆಟಾಲಾಕ್ಸಿಲ್ ಅಥವಾ ಮ್ಯಾಂಕೋಜೆಬ್ ಸಿಂಪಡಿಸಿ.",
+        "cultural": "ಹೆಚ್ಚಿನ ತೇವಾಂಶ ತಪ್ಪಿಸಿ ಮತ್ತು ನೀರಿನ ಹರಿವು ಸುಧಾರಿಸಿ."
+      }
+    }
+  },
+
+  "tomato_target_spot": {
+    "display_name": {
+      "en": "Tomato: Target Spot",
+      "hi": "टमाटर: टारगेट स्पॉट रोग",
+      "kn": "ಟೊಮೆಟೊ: ಟಾರ್ಗೆಟ್ ಸ್ಪಾಟ್"
+    },
+    "remedies": {
+      "en": {
+        "organic": "Apply neem oil and bio-fungicides regularly.",
+        "chemical": "Use Azoxystrobin or Chlorothalonil fungicides.",
+        "cultural": "Remove infected foliage and improve air circulation."
+      },
+      "hi": {
+        "organic": "नीम तेल और जैविक कवकनाशी का उपयोग करें।",
+        "chemical": "एज़ॉक्सीस्ट्रोबिन या क्लोरोथैलोनिल का उपयोग करें।",
+        "cultural": "संक्रमित पत्तियां हटाएं और वायु प्रवाह बढ़ाएं।"
+      },
+      "kn": {
+        "organic": "ಬೇವಿನ ಎಣ್ಣೆ ಮತ್ತು ಸಾವಯವ ಶಿಲೀಂಧ್ರನಾಶಕ ಬಳಸಿ.",
+        "chemical": "ಅಜೋಕ್ಸಿಸ್ಟ್ರೋಬಿನ್ ಅಥವಾ ಕ್ಲೋರೋಥಲೋನಿಲ್ ಬಳಸಿ.",
+        "cultural": "ಸೋಂಕಿತ ಎಲೆಗಳನ್ನು ತೆಗೆದುಹಾಕಿ ಮತ್ತು ಗಾಳಿ ಹರಿವು ಹೆಚ್ಚಿಸಿ."
+      }
+    }
+  },
+
+  "tomato_tomato_mosaic_virus": {
+    "display_name": {
+      "en": "Tomato: Tomato Mosaic Virus",
+      "hi": "टमाटर: टोमैटो मोज़ेक वायरस",
+      "kn": "ಟೊಮೆಟೊ: ಟೊಮ್ಯಾಟೊ ಮೋಸಾಯಿಕ್ ವೈರಸ್"
+    },
+    "remedies": {
+      "en": {
+        "organic": "Use virus-free seeds and neem oil to control vectors.",
+        "chemical": "No direct chemical cure exists; manage insect vectors carefully.",
+        "cultural": "Remove infected plants and disinfect gardening tools."
+      },
+      "hi": {
+        "organic": "वायरस मुक्त बीज और नीम तेल का उपयोग करें।",
+        "chemical": "इस वायरस का सीधा रासायनिक उपचार उपलब्ध नहीं है।",
+        "cultural": "संक्रमित पौधों को हटाएं और उपकरणों को साफ करें।"
+      },
+      "kn": {
+        "organic": "ವೈರಸ್ ರಹಿತ ಬೀಜ ಮತ್ತು ಬೇವಿನ ಎಣ್ಣೆ ಬಳಸಿ.",
+        "chemical": "ಈ ವೈರಸ್‌ಗೆ ನೇರ ರಾಸಾಯನಿಕ ಚಿಕಿತ್ಸೆ ಇಲ್ಲ.",
+        "cultural": "ಸೋಂಕಿತ ಸಸ್ಯಗಳನ್ನು ತೆಗೆದುಹಾಕಿ ಮತ್ತು ಉಪಕರಣಗಳನ್ನು ಶುದ್ಧಗೊಳಿಸಿ."
+      }
+    }
+  },
+
+  "tomato_tomato_yellowleaf_curl_virus": {
+    "display_name": {
+      "en": "Tomato: Yellow Leaf Curl Virus",
+      "hi": "टमाटर: येलो लीफ कर्ल वायरस",
+      "kn": "ಟೊಮೆಟೊ: ಯೆಲ್ಲೋ ಲೀಫ್ ಕರ್‌ಲ್ ವೈರಸ್"
+    },
+    "remedies": {
+      "en": {
+        "organic": "Control whiteflies using neem oil and sticky traps.",
+        "chemical": "Apply Imidacloprid-based insecticides against whiteflies.",
+        "cultural": "Remove infected plants and maintain weed-free fields."
+      },
+      "hi": {
+        "organic": "सफेद मक्खियों को नियंत्रित करने के लिए नीम तेल का उपयोग करें।",
+        "chemical": "इमिडाक्लोप्रिड आधारित कीटनाशक का उपयोग करें।",
+        "cultural": "संक्रमित पौधे हटाएं और खेत को खरपतवार मुक्त रखें।"
+      },
+      "kn": {
+        "organic": "ವೈಟ್‌ಫ್ಲೈ ನಿಯಂತ್ರಣಕ್ಕೆ ಬೇವಿನ ಎಣ್ಣೆ ಮತ್ತು ಟ್ರಾಪ್ ಬಳಸಿ.",
+        "chemical": "ಇಮಿಡಾಕ್ಲೋಪ್ರಿಡ್ ಆಧಾರಿತ ಕೀಟನಾಶಕ ಬಳಸಿ.",
+        "cultural": "ಸೋಂಕಿತ ಸಸ್ಯ ತೆಗೆದುಹಾಕಿ ಮತ್ತು ಹೊಲವನ್ನು ಕಳೆರಹಿತವಾಗಿಡಿ."
+      }
+    }
+  },
+
+  "tomato_bacterial_spot": {
+    "display_name": {
+      "en": "Tomato: Bacterial Spot",
+      "hi": "टमाटर: बैक्टीरियल स्पॉट",
+      "kn": "ಟೊಮೆಟೊ: ಬ್ಯಾಕ್ಟೀರಿಯಲ್ ಸ್ಪಾಟ್"
+    },
+    "remedies": {
+      "en": {
+        "organic": "Apply copper sprays and neem extracts weekly.",
+        "chemical": "Use Copper Hydroxide bactericides as directed.",
+        "cultural": "Avoid overhead watering and rotate crops regularly."
+      },
+      "hi": {
+        "organic": "तांबा स्प्रे और नीम अर्क का उपयोग करें।",
+        "chemical": "कॉपर हाइड्रॉक्साइड बैक्टीरिसाइड का उपयोग करें।",
+        "cultural": "ऊपर से सिंचाई से बचें और फसल चक्र अपनाएं।"
+      },
+      "kn": {
+        "organic": "ತಾಮ್ರ ಸಿಂಪಡಣೆ ಮತ್ತು ಬೇವಿನ ಸಾರ ಬಳಸಿ.",
+        "chemical": "ಕಾಪರ್ ಹೈಡ್ರಾಕ್ಸೈಡ್ ಬಳಸಿ.",
+        "cultural": "ಮೇಲಿನಿಂದ ನೀರು ಹಾಕಬೇಡಿ ಮತ್ತು ಬೆಳೆ ಪರಿವರ್ತನೆ ಮಾಡಿ."
+      }
+    }
+  },
+
+  "tomato_early_blight": {
+    "display_name": {
+      "en": "Tomato: Early Blight",
+      "hi": "टमाटर: प्रारंभिक झुलसा रोग",
+      "kn": "ಟೊಮೆಟೊ: ಆರಂಭಿಕ ಬ್ಲೈಟ್"
+    },
+    "remedies": {
+      "en": {
+        "organic": "Use compost tea and neem oil sprays regularly.",
+        "chemical": "Apply Mancozeb or Chlorothalonil fungicides.",
+        "cultural": "Remove infected leaves and avoid overcrowding plants."
+      },
+      "hi": {
+        "organic": "कम्पोस्ट चाय और नीम तेल का उपयोग करें।",
+        "chemical": "मैंकोजेब या क्लोरोथैलोनिल का उपयोग करें।",
+        "cultural": "संक्रमित पत्तियां हटाएं और पौधों को अधिक घना न रखें।"
+      },
+      "kn": {
+        "organic": "ಕಾಂಪೋಸ್ಟ್ ಚಹಾ ಮತ್ತು ಬೇವಿನ ಎಣ್ಣೆ ಬಳಸಿ.",
+        "chemical": "ಮ್ಯಾಂಕೋಜೆಬ್ ಅಥವಾ ಕ್ಲೋರೋಥಲೋನಿಲ್ ಬಳಸಿ.",
+        "cultural": "ಸೋಂಕಿತ ಎಲೆ ತೆಗೆದುಹಾಕಿ ಮತ್ತು ಗಿಡಗಳನ್ನು ಗಟ್ಟಿಯಾಗಿ ನೆಡಬೇಡಿ."
+      }
+    }
+  },
+
+  "tomato_healthy": {
+    "display_name": {
+      "en": "Tomato: Healthy",
+      "hi": "टमाटर: स्वस्थ",
+      "kn": "ಟೊಮೆಟೊ: ಆರೋಗ್ಯಕರ"
+    },
+    "remedies": {
+      "en": {
+        "organic": "Maintain balanced compost and natural nutrient supplements.",
+        "chemical": "No chemical treatment required.",
+        "cultural": "Ensure consistent watering and adequate sunlight exposure."
+      },
+      "hi": {
+        "organic": "संतुलित कम्पोस्ट और प्राकृतिक पोषक तत्वों का उपयोग करें।",
+        "chemical": "किसी रासायनिक उपचार की आवश्यकता नहीं है।",
+        "cultural": "नियमित सिंचाई और पर्याप्त धूप सुनिश्चित करें।"
+      },
+      "kn": {
+        "organic": "ಸಮತೋಲನಿತ ಕಾಂಪೋಸ್ಟ್ ಮತ್ತು ನೈಸರ್ಗಿಕ ಪೋಷಕಾಂಶ ಬಳಸಿ.",
+        "chemical": "ರಾಸಾಯನಿಕ ಚಿಕಿತ್ಸೆ ಅಗತ್ಯವಿಲ್ಲ.",
+        "cultural": "ನಿಯಮಿತ ನೀರಾವರಿ ಮತ್ತು ಸಾಕಷ್ಟು ಸೂರ್ಯನ ಬೆಳಕು ಒದಗಿಸಿ."
+      }
+    }
+  },
+
+  "tomato_late_blight": {
+    "display_name": {
+      "en": "Tomato: Late Blight",
+      "hi": "टमाटर: अगेती झुलसा रोग",
+      "kn": "ಟೊಮೆಟೊ: ಲೇಟ್ ಬ್ಲೈಟ್"
+    },
+    "remedies": {
+      "en": {
+        "organic": "Apply copper-based organic fungicides or neem oil solutions early in the morning.",
+        "chemical": "Apply Chlorothalonil or Mancozeb sprays according to manufacturer instructions.",
+        "cultural": "Avoid overhead irrigation and improve airflow around plants."
+      },
+      "hi": {
+        "organic": "सुबह जल्दी तांबा आधारित जैविक कवकनाशी या नीम के तेल का उपयोग करें।",
+        "chemical": "निर्माता के निर्देशानुसार क्लोरोथैलोनिल या मैंकोजेब स्प्रे करें।",
+        "cultural": "ऊपर से सिंचाई से बचें और पौधों के आसपास वायु प्रवाह बढ़ाएं।"
+      },
+      "kn": {
+        "organic": "ಬೆಳಗ್ಗೆ ಬೇಗ ತಾಮ್ರ ಆಧಾರಿತ ಸಾವಯವ ಶಿಲೀಂಧ್ರನಾಶಕ ಅಥವಾ ಬೇವಿನ ಎಣ್ಣೆ ಸಿಂಪಡಿಸಿ.",
+        "chemical": "ತಯಾರಕರ ಸೂಚನೆಯಂತೆ ಕ್ಲೋರೋಥಲೋನಿಲ್ ಅಥವಾ ಮ್ಯಾಂಕೋಜೆಬ್ ಬಳಸಿ.",
+        "cultural": "ಮೇಲಿನಿಂದ ನೀರು ಹಾಕಬೇಡಿ ಮತ್ತು ಗಾಳಿ ಹರಿವನ್ನು ಹೆಚ್ಚಿಸಿ."
+      }
+    }
+  },
+
+  "tomato_leaf_mold": {
+    "display_name": {
+      "en": "Tomato: Leaf Mold",
+      "hi": "टमाटर: लीफ मोल्ड",
+      "kn": "ಟೊಮೆಟೊ: ಲೀಫ್ ಮೋಲ್ಡ್"
+    },
+    "remedies": {
+      "en": {
+        "organic": "Use sulfur sprays and neem oil treatments.",
+        "chemical": "Apply Chlorothalonil or Copper fungicides.",
+        "cultural": "Reduce humidity and improve greenhouse ventilation."
+      },
+      "hi": {
+        "organic": "सल्फर स्प्रे और नीम तेल का उपयोग करें।",
+        "chemical": "क्लोरोथैलोनिल या कॉपर कवकनाशी का उपयोग करें।",
+        "cultural": "नमी कम करें और वेंटिलेशन सुधारें।"
+      },
+      "kn": {
+        "organic": "ಸಲ್ಫರ್ ಸಿಂಪಡಣೆ ಮತ್ತು ಬೇವಿನ ಎಣ್ಣೆ ಬಳಸಿ.",
+        "chemical": "ಕ್ಲೋರೋಥಲೋನಿಲ್ ಅಥವಾ ಕಾಪರ್ ಶಿಲೀಂಧ್ರನಾಶಕ ಬಳಸಿ.",
+        "cultural": "ತೇವಾಂಶ ಕಡಿಮೆ ಮಾಡಿ ಮತ್ತು ಗಾಳಿಯ ಹರಿವು ಸುಧಾರಿಸಿ."
+      }
+    }
+  },
+
+  "tomato_septoria_leaf_spot": {
+    "display_name": {
+      "en": "Tomato: Septoria Leaf Spot",
+      "hi": "टमाटर: सेप्टोरिया लीफ स्पॉट",
+      "kn": "ಟೊಮೆಟೊ: ಸೆಪ್ಟೋರಿಯಾ ಲೀಫ್ ಸ್ಪಾಟ್"
+    },
+    "remedies": {
+      "en": {
+        "organic": "Apply compost tea and copper fungicides regularly.",
+        "chemical": "Use Mancozeb or Chlorothalonil sprays.",
+        "cultural": "Remove lower infected leaves and avoid water splashing."
+      },
+      "hi": {
+        "organic": "कम्पोस्ट चाय और तांबा आधारित कवकनाशी का उपयोग करें।",
+        "chemical": "मैंकोजेब या क्लोरोथैलोनिल स्प्रे करें।",
+        "cultural": "संक्रमित निचली पत्तियां हटाएं और पानी के छींटों से बचें।"
+      },
+      "kn": {
+        "organic": "ಕಾಂಪೋಸ್ಟ್ ಚಹಾ ಮತ್ತು ತಾಮ್ರ ಶಿಲೀಂಧ್ರನಾಶಕ ಬಳಸಿ.",
+        "chemical": "ಮ್ಯಾಂಕೋಜೆಬ್ ಅಥವಾ ಕ್ಲೋರೋಥಲೋನಿಲ್ ಸಿಂಪಡಿಸಿ.",
+        "cultural": "ಕೆಳಗಿನ ಸೋಂಕಿತ ಎಲೆಗಳನ್ನು ತೆಗೆದುಹಾಕಿ ಮತ್ತು ನೀರಿನ ಸಿಂಪಡಣೆ ತಪ್ಪಿಸಿ."
+      }
+    }
+  },
+
+  "tomato_spider_mites_two_spotted_spider_mite": {
+    "display_name": {
+      "en": "Tomato: Spider Mites",
+      "hi": "टमाटर: स्पाइडर माइट",
+      "kn": "ಟೊಮೆಟೊ: ಸ್ಪೈಡರ್ ಮೈಟ್ಸ್"
+    },
+    "remedies": {
+      "en": {
+        "organic": "Spray neem oil and introduce beneficial predatory mites.",
+        "chemical": "Apply approved miticides according to agricultural guidelines.",
+        "cultural": "Maintain humidity and remove heavily infested leaves."
+      },
+      "hi": {
+        "organic": "नीम तेल स्प्रे करें और लाभकारी शिकारी माइट्स का उपयोग करें।",
+        "chemical": "अनुमोदित माइटनाशी का उपयोग करें।",
+        "cultural": "नमी बनाए रखें और संक्रमित पत्तियां हटाएं।"
+      },
+      "kn": {
+        "organic": "ಬೇವಿನ ಎಣ್ಣೆ ಸಿಂಪಡಿಸಿ ಮತ್ತು ಉಪಯುಕ್ತ ಮೈಟ್ಸ್ ಬಳಸಿ.",
+        "chemical": "ಅನುಮೋದಿತ ಮೈಟ್ನಾಶಕ ಬಳಸಿ.",
+        "cultural": "ತೇವಾಂಶ ಕಾಪಾಡಿ ಮತ್ತು ಸೋಂಕಿತ ಎಲೆ ತೆಗೆದುಹಾಕಿ."
+      }
+    }
+  }
+}

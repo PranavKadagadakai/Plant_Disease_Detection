@@ -1,0 +1,44 @@
+{
+  "appTitle": "ಸಸ್ಯ ರೋಗ ಪತ್ತೆ",
+
+  "train": "ಪ್ರಶಿಕ್ಷಣ",
+  "evaluate": "ಮೌಲ್ಯಮಾಪನ",
+  "detect": "ಪತ್ತೆ",
+
+  "trainModel": "ಮಾದರಿ ತರಬೇತಿ",
+  "training": "ತರಬೇತಿ ನಡೆಯುತ್ತಿದೆ...",
+  "errorTraining": "ತರಬೇತಿಯಲ್ಲಿ ದೋಷ",
+
+  "evaluateModel": "ಮಾದರಿ ಮೌಲ್ಯಮಾಪನ",
+  "evaluating": "ಮೌಲ್ಯಮಾಪನ ನಡೆಯುತ್ತಿದೆ...",
+  "evaluationFailed": "ಮೌಲ್ಯಮಾಪನ ವಿಫಲ",
+
+  "detectDisease": "ರೋಗ ಪತ್ತೆಹಚ್ಚಿ",
+  "detecting": "ಪತ್ತೆಹಚ್ಚಲಾಗುತ್ತಿದೆ...",
+  "plantDiseaseDetection": "ಸಸ್ಯ ರೋಗ ಪತ್ತೆ",
+
+  "theme": "ಥೀಮ್",
+  "language": "ಭಾಷೆ",
+
+  "light": "ಲೈಟ್",
+  "dark": "ಡಾರ್ಕ್",
+  "system": "ಸಿಸ್ಟಮ್",
+
+  "detectionResult": "ಪತ್ತೆ ಫಲಿತಾಂಶ",
+  "classIndex": "ವರ್ಗ ಸೂಚ್ಯಂಕ",
+  "rawClass": "ಮೂಲ ವರ್ಗ",
+  "confidence": "ವಿಶ್ವಾಸ ಮಟ್ಟ",
+
+  "lowConfidenceWarning": "ಕಡಿಮೆ ವಿಶ್ವಾಸ ಮಟ್ಟ. ಚಿಕಿತ್ಸೆಗೂ ಮೊದಲು ಪರಿಶೀಲಿಸಿ.",
+
+  "diseaseName": "ರೋಗದ ಹೆಸರು",
+  "topPredictions": "ಮುಖ್ಯ ಭವಿಷ್ಯವಾಣಿ",
+  "treatmentRecommendations": "ಚಿಕಿತ್ಸಾ ಶಿಫಾರಸುಗಳು",
+
+  "organic": "ಸಾವಯವ",
+  "chemical": "ರಾಸಾಯನಿಕ",
+  "cultural": "ಸಾಂಸ್ಕೃತಿಕ",
+
+  "confusionMatrix": "ಕನ್ಫ್ಯೂಷನ್ ಮ್ಯಾಟ್ರಿಕ್ಸ್",
+  "download": "ಡೌನ್‌ಲೋಡ್"
+}

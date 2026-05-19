@@ -9,3 +9,5 @@ LR = 1e-3
 IMG_SIZE = 224
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+CONFIDENCE_THRESHOLD = 0.60

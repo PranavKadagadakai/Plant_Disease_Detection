@@ -10,8 +10,8 @@ export const evaluateModel = async () => {
   return axios.get(`${API_BASE}/evaluate`);
 };
 
-export const predictImage = async (formData) => {
-  return axios.post(`${API_BASE}/predict`, formData, {
+export const detectDisease = async (formData) => {
+  return axios.post(`${API_BASE}/detect`, formData, {
     headers: {
       "Content-Type": "multipart/form-data",
     },

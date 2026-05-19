@@ -1,13 +1,13 @@
 import Train from "../components/Train";
 import Evaluate from "../components/Evaluate";
-import Predict from "../components/Predict";
+import Detect from "../components/Detect";
 
 function Dashboard() {
   return (
     <div className="container">
       <Train />
       <Evaluate />
-      <Predict />
+      <Detect />
     </div>
   );
 }

@@ -1,0 +1,44 @@
+{
+  "appTitle": "पौध रोग पहचान",
+
+  "train": "प्रशिक्षण",
+  "evaluate": "मूल्यांकन",
+  "detect": "पहचान",
+
+  "trainModel": "मॉडल प्रशिक्षित करें",
+  "training": "प्रशिक्षण जारी है...",
+  "errorTraining": "प्रशिक्षण के दौरान त्रुटि",
+
+  "evaluateModel": "मॉडल मूल्यांकन",
+  "evaluating": "मूल्यांकन जारी है...",
+  "evaluationFailed": "मूल्यांकन विफल",
+
+  "detectDisease": "रोग पहचानें",
+  "detecting": "पहचान हो रही है...",
+  "plantDiseaseDetection": "पौध रोग पहचान",
+
+  "theme": "थीम",
+  "language": "भाषा",
+
+  "light": "लाइट",
+  "dark": "डार्क",
+  "system": "सिस्टम",
+
+  "detectionResult": "पहचान परिणाम",
+  "classIndex": "क्लास इंडेक्स",
+  "rawClass": "रॉ क्लास",
+  "confidence": "विश्वास स्तर",
+
+  "lowConfidenceWarning": "कम विश्वास स्तर। उपचार से पहले मैन्युअल सत्यापन करें।",
+
+  "diseaseName": "रोग का नाम",
+  "topPredictions": "शीर्ष भविष्यवाणियाँ",
+  "treatmentRecommendations": "उपचार सुझाव",
+
+  "organic": "जैविक",
+  "chemical": "रासायनिक",
+  "cultural": "सांस्कृतिक",
+
+  "confusionMatrix": "कन्फ्यूजन मैट्रिक्स",
+  "download": "डाउनलोड"
+}

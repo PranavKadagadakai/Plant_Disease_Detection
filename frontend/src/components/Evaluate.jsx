@@ -1,29 +1,38 @@
 import { useState } from "react";
+
 import { evaluateModel } from "../api/api";
+
+import { useTranslation } from "react-i18next";
 
 function Evaluate() {
   const [metrics, setMetrics] = useState(null);
+
   const [loading, setLoading] = useState(false);
+
+  const { t } = useTranslation();
 
   const handleEvaluate = async () => {
     setLoading(true);
+
     try {
       const res = await evaluateModel();
       setMetrics(res.data);
     } catch (err) {
-      setMetrics({ error: "Evaluation failed" });
+      setMetrics({
+        error: t("evaluationFailed"),
+      });
     }
+
     setLoading(false);
   };
 
   return (
     <div className="evaluate-page">
-      {/* Centered Card */}
       <div className="card">
-        <h3>Evaluate Model</h3>
+        <h3>{t("evaluateModel")}</h3>
 
         <button onClick={handleEvaluate} disabled={loading}>
-          {loading ? "Evaluating..." : "Evaluate"}
+          {loading ? t("evaluating") : t("evaluate")}
         </button>
 
         {metrics && (
@@ -36,7 +45,8 @@ function Evaluate() {
 
                 return (
                   <div key={key} className="metric-item">
-                    <strong>{key}:</strong>{" "}
+                    <strong>{key}:</strong>
+
                     {typeof value === "number"
                       ? value.toFixed(4)
                       : value.toString()}
@@ -48,20 +58,22 @@ function Evaluate() {
         )}
       </div>
 
-      {/* Full-width Confusion Matrix */}
       {metrics && metrics.confusion_matrix_image && (
         <div className="cm-full-section">
-          <h3>Confusion Matrix</h3>
+          <h3>{t("confusionMatrix")}</h3>
 
           <button
             onClick={() => {
               const link = document.createElement("a");
+
               link.href = `data:image/png;base64,${metrics.confusion_matrix_image}`;
+
               link.download = "cm.png";
+
               link.click();
             }}
           >
-            Download
+            {t("download")}
           </button>
 
           <div className="cm-full-container">
