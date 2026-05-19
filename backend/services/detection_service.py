@@ -25,6 +25,46 @@ classes = None
 REMEDIES_DB = load_remedies_json()
 
 
+def get_low_confidence_advisory():
+    """
+    Advisory shown when model confidence
+    is too low for reliable prediction.
+    """
+
+    return {
+        "show_contact_advisory": True,
+        "message": {
+            "en": (
+                "The prediction confidence is low. "
+                "Please verify the disease manually "
+                "with an agricultural expert before "
+                "applying treatment."
+            ),
+            "hi": (
+                "पूर्वानुमान का विश्वास स्तर कम है। उपचार करने से पहले कृषि विशेषज्ञ से सत्यापन करें।"
+            ),
+            "kn": ("ಭವಿಷ್ಯವಾಣಿ ವಿಶ್ವಾಸ ಮಟ್ಟ ಕಡಿಮೆ ಇದೆ. ಚಿಕಿತ್ಸೆಗೆ ಮೊದಲು ಕೃಷಿ ತಜ್ಞರೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ."),
+        },
+        "contacts": [
+            {
+                "name": "Kisan Call Center",
+                "type": "toll_free",
+                "value": "1800-180-1551",
+            },
+            {
+                "name": "ICAR Helpline",
+                "type": "support",
+                "value": "+91-11-25843301",
+            },
+            {
+                "name": "Local Agriculture Officer",
+                "type": "regional",
+                "value": "Visit nearest agriculture office",
+            },
+        ],
+    }
+
+
 def load_model():
     global model, classes
 
@@ -141,7 +181,7 @@ def format_prediction_response(
         REMEDIES_DB["generic_fallback"],
     )
 
-    return {
+    response = {
         "status": "success",
         "normalized_class_name": (normalized_class_name),
         "confidence": float(confidence_score),
@@ -149,3 +189,8 @@ def format_prediction_response(
         "display_names": treatment_data["display_name"],
         "treatments": treatment_data["remedies"],
     }
+
+    if low_confidence_flag:
+        response["advisory"] = get_low_confidence_advisory()
+
+    return response

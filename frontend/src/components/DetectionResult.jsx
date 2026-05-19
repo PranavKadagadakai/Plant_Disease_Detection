@@ -52,8 +52,22 @@ function DetectionResult({ result }) {
 
         <ConfidenceBar confidence={result.confidence} />
 
-        {result.low_confidence_flag && (
-          <div className="warning-box">⚠ {t("lowConfidenceWarning")}</div>
+        {result.low_confidence_flag && result.advisory && (
+          <div className="warning-box">
+            <h4>⚠ {t("lowConfidenceWarning")}</h4>
+
+            <p>{result.advisory.message[language]}</p>
+
+            <div className="contact-list">
+              {result.advisory.contacts.map((contact, index) => (
+                <div key={index} className="contact-item">
+                  <strong>{contact.name}</strong>
+
+                  <span>{contact.value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         )}
       </div>
 

@@ -1,9 +1,14 @@
-/* =========================
-   Theme Variables (Dark Default)
-========================= */
+/* =========================================================
+   THEME VARIABLES
+========================================================= */
+
+/* Dark Theme (Default) */
 :root {
     --bg: #121212;
     --card-bg: #1e1e1e;
+    --section-bg: #1f1f1f;
+    --surface-bg: #2a2a2a;
+
     --border: #2a2a2a;
 
     --text-primary: #e0e0e0;
@@ -13,14 +18,30 @@
     --primary-hover: #e66a00;
 
     --success: #4caf50;
+    --warning: #ff9800;
     --error: #f44336;
 
+    --button-disabled: #555;
+
+    --confidence-bg: #333;
+
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+    --radius-sm: 8px;
+    --radius-md: 10px;
+    --radius-lg: 12px;
+
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.4s ease;
 }
 
+/* Light Theme */
 [data-theme="light"] {
     --bg: #f5f5f5;
     --card-bg: #ffffff;
+    --section-bg: #f7f7f7;
+    --surface-bg: #ececec;
+
     --border: #dddddd;
 
     --text-primary: #111111;
@@ -30,22 +51,52 @@
     --primary-hover: #e66a00;
 
     --success: #4caf50;
+    --warning: #ff9800;
     --error: #f44336;
+
+    --button-disabled: #999;
+
+    --confidence-bg: #d5d5d5;
 
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* =========================
-   Global
-========================= */
-body {
-    margin: 0;
-    font-family: "Inter", system-ui, sans-serif;
-    background: var(--bg);
-    color: var(--text-primary);
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
 }
 
-/* Layout */
+body {
+    margin: 0;
+
+    font-family: "Inter", system-ui, sans-serif;
+
+    background: var(--bg);
+    color: var(--text-primary);
+
+    transition:
+        background var(--transition-fast),
+        color var(--transition-fast);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+select,
+input {
+    font: inherit;
+}
+
+/* =========================================================
+   APP LAYOUT
+========================================================= */
+
 .app {
     min-height: 100vh;
 }
@@ -54,38 +105,55 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+
     padding: 40px 20px;
 }
 
-/* =========================
-   Navbar
-========================= */
+/* =========================================================
+   NAVBAR
+========================================================= */
+
 .navbar {
     background: var(--card-bg);
+
     border-bottom: 1px solid var(--border);
+
     padding: 15px 20px;
-    text-align: center;
+}
+
+.navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar h2 {
     margin: 0;
+
     font-size: 20px;
+    font-weight: 600;
+
     color: var(--text-primary);
 }
 
-/* Nav Links */
+/* Navigation Links */
+
 .nav-links {
     display: flex;
     justify-content: center;
     gap: 25px;
-    margin-top: 10px;
+
+    margin-top: 12px;
 }
 
 .nav-links a {
     text-decoration: none;
+
     color: var(--text-secondary);
+
     font-weight: 500;
-    transition: 0.2s;
+
+    transition: color var(--transition-fast);
 }
 
 .nav-links a:hover {
@@ -94,37 +162,52 @@ body {
 
 .nav-links a.active {
     color: var(--primary);
+
     border-bottom: 2px solid var(--primary);
+
     padding-bottom: 2px;
 }
-.navbar-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
+/* =========================================================
+   SETTINGS DROPDOWN
+========================================================= */
 
 .settings-container {
     position: relative;
 }
 
 .settings-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background: transparent;
+
     border: none;
+
     cursor: pointer;
+
     color: var(--text-primary);
+
+    padding: 4px;
+
+    width: auto;
+    margin: 0;
 }
 
 .settings-dropdown {
     position: absolute;
-    top: 40px;
+
+    top: 42px;
     right: 0;
+
     width: 220px;
 
     background: var(--card-bg);
 
     border: 1px solid var(--border);
 
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
 
     padding: 16px;
 
@@ -133,67 +216,93 @@ body {
     z-index: 100;
 }
 
-.dropdown-section {
+.dropdown-section:not(:last-child) {
     margin-bottom: 18px;
-}
-
-.dropdown-section:last-child {
-    margin-bottom: 0;
 }
 
 .dropdown-section label {
     display: block;
+
     margin-bottom: 8px;
+
     font-size: 14px;
+
     color: var(--text-secondary);
 }
 
 .dropdown-section select {
     width: 100%;
+
     padding: 10px;
 
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
 
     border: 1px solid var(--border);
 
     background: var(--bg);
 
     color: var(--text-primary);
+
+    outline: none;
 }
 
-/* =========================
-   Card
-========================= */
+/* =========================================================
+   CARD
+========================================================= */
+
 .card {
-    background: var(--card-bg);
-    padding: 25px;
-    border-radius: 12px;
     width: 420px;
-    box-shadow: var(--shadow);
+
+    background: var(--card-bg);
+
     border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    padding: 25px;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform var(--transition-fast),
+        background var(--transition-fast);
 }
 
-/* Headings */
+.card:hover {
+    transform: translateY(-2px);
+}
+
 .card h3 {
     margin-top: 0;
     margin-bottom: 15px;
+
     font-weight: 600;
 }
 
-/* =========================
-   Buttons
-========================= */
+/* =========================================================
+   BUTTONS
+========================================================= */
+
 button {
     width: 100%;
-    padding: 10px;
+
     margin-top: 10px;
+    padding: 10px;
+
     border: none;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
+
     background: var(--primary);
+
     color: white;
+
     font-weight: 500;
+
     cursor: pointer;
-    transition: 0.2s;
+
+    transition:
+        background var(--transition-fast),
+        transform var(--transition-fast);
 }
 
 button:hover {
@@ -201,110 +310,101 @@ button:hover {
 }
 
 button:disabled {
-    background: #555;
+    background: var(--button-disabled);
+
     cursor: not-allowed;
 }
 
-/* =========================
-   Metrics
-========================= */
+/* =========================================================
+   METRICS
+========================================================= */
+
 .metrics {
     margin-top: 15px;
 }
 
 .metric-item {
-    padding: 6px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+
+    padding: 8px 0;
+    margin-bottom: 10px;
+
     border-bottom: 1px solid var(--border);
 }
 
-/* =========================
-   Status
-========================= */
+/* =========================================================
+   STATUS STATES
+========================================================= */
+
 .success {
     color: var(--success);
+
     font-weight: 500;
+
     margin-top: 10px;
 }
 
 .error {
     color: var(--error);
+
     margin-top: 10px;
 }
 
-/* =========================
-   Image Preview
-========================= */
-.preview {
-    width: 100%;
-    margin-top: 10px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
+.error-box {
+    background: var(--error);
+
+    color: white;
+
+    padding: 16px;
+
+    border-radius: var(--radius-sm);
 }
 
-/* =========================
-   Confusion Matrix
-========================= */
-/* Page layout */
-.evaluate-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.warning-box {
+    margin-top: 16px;
+
+    padding: 16px;
+
+    border-radius: var(--radius-sm);
+
+    background: var(--warning);
+
+    color: #111;
+
+    font-weight: 600;
 }
 
-/* Full-width confusion matrix section */
-.cm-full-section {
-    width: 100%;
-    margin-top: 40px;
-    padding: 20px;
-}
-
-/* Center heading */
-.cm-full-section h3 {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-/* Scroll container */
-.cm-full-container {
-    width: 100%;
-    overflow-x: auto;
-    display: flex;
-    justify-content: center;
-}
-
-/* Large image */
-.cm-full-image {
-    max-width: 1200px;
-    min-width: 800px;
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid var(--border);
-}
-
-/* =========================
-   Subtle Animations
-========================= */
-.card:hover {
-    transform: translateY(-2px);
-    transition: 0.2s ease;
-}
+/* =========================================================
+   DETECT PAGE
+========================================================= */
 
 .detect-card {
     max-width: 900px;
+
     margin: auto;
 }
 
 .preview-container {
     margin-top: 20px;
+
     text-align: center;
 }
 
 .preview {
     width: 320px;
-    max-width: 100%;
-    border-radius: 12px;
-    border: 1px solid #333;
+
+    margin-top: 10px;
+
+    border-radius: var(--radius-lg);
+
+    border: 1px solid var(--border);
 }
+
+/* =========================================================
+   DETECTION RESULTS
+========================================================= */
 
 .result-container {
     margin-top: 30px;
@@ -312,88 +412,234 @@ button:disabled {
 
 .result-section {
     margin-bottom: 28px;
+
     padding: 20px;
-    border-radius: 12px;
-    background: #1f1f1f;
+
+    border-radius: var(--radius-lg);
+
+    background: var(--section-bg);
 }
 
-.metric-item {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 14px;
-}
+/* =========================================================
+   CONFIDENCE BAR
+========================================================= */
 
 .confidence-bar-wrapper {
     width: 100%;
     height: 12px;
-    background: #333;
-    border-radius: 999px;
-    overflow: hidden;
+
     margin-top: 10px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: var(--confidence-bg);
 }
 
 .confidence-bar {
     height: 100%;
-    background: #4caf50;
-    transition: width 0.4s ease;
+
+    background: var(--success);
+
+    transition: width var(--transition-medium);
 }
 
-.warning-box {
-    margin-top: 16px;
-    padding: 14px;
-    border-radius: 8px;
-    background: #ff9800;
-    color: #111;
-    font-weight: 600;
-}
+/* =========================================================
+   LANGUAGE / TREATMENT CARDS
+========================================================= */
 
-.error-box {
-    padding: 16px;
-    border-radius: 8px;
-    background: #d32f2f;
-    color: white;
+.language-grid,
+.treatment-grid {
+    display: grid;
+
+    gap: 20px;
 }
 
 .language-grid {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
+}
+
+.treatment-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.language-card,
+.treatment-language-card {
+    background: var(--surface-bg);
+
+    border-radius: var(--radius-lg);
 }
 
 .language-card {
-    background: #2a2a2a;
     padding: 16px;
-    border-radius: 10px;
 }
 
 .language-card p {
     margin-top: 8px;
+
     line-height: 1.5;
 }
 
-.treatment-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
 .treatment-language-card {
-    background: #2a2a2a;
     padding: 18px;
-    border-radius: 12px;
 }
 
 .treatment-language-card h5 {
     margin-bottom: 16px;
-    color: #ff9800;
+
+    color: var(--primary);
 }
 
-.treatment-item {
+.treatment-item:not(:last-child) {
     margin-bottom: 16px;
 }
 
 .treatment-item p {
     margin-top: 6px;
+
     line-height: 1.5;
+}
+
+/* =========================================================
+   LOW CONFIDENCE CONTACTS
+========================================================= */
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px;
+
+    border-radius: var(--radius-md);
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.contact-item strong,
+.contact-item span {
+    font-size: 14px;
+}
+
+.contact-item span {
+    word-break: break-word;
+}
+
+/* =========================================================
+   EVALUATE PAGE
+========================================================= */
+
+.evaluate-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================================================
+   CONFUSION MATRIX
+========================================================= */
+
+.cm-full-section {
+    width: 100%;
+
+    margin-top: 40px;
+
+    padding: 20px;
+}
+
+.cm-full-section h3 {
+    margin-bottom: 15px;
+
+    text-align: center;
+}
+
+.cm-full-container {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.cm-full-image {
+    width: 100%;
+
+    max-width: 1200px;
+    min-width: 800px;
+
+    border-radius: var(--radius-md);
+
+    border: 1px solid var(--border);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+    .navbar-top {
+        gap: 12px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .metric-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cm-full-image {
+        min-width: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: 20px 12px;
+    }
+
+    .navbar {
+        padding: 12px;
+    }
+
+    .navbar h2 {
+        font-size: 18px;
+    }
+
+    .settings-dropdown {
+        width: 200px;
+    }
+
+    .preview {
+        width: 100%;
+    }
+
+    .cm-full-image {
+        min-width: 450px;
+    }
 }
