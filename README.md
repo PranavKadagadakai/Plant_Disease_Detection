@@ -1,18 +1,24 @@
 # Plant Disease Detection (Full Stack)
 
-A full-stack AI application for detecting plant diseases using deep learning. The system includes a **PyTorch-based model**, a **FastAPI backend**, and a **React SPA frontend** for training, evaluation, and prediction with visualization support.
+A full-stack AI-powered plant disease detection system built with **PyTorch**, **FastAPI**, and **React**. The application provides disease prediction, model training, evaluation metrics, multilingual treatment recommendations, and a farmer-focused advisory workflow with low-confidence escalation support.
 
 ---
 
 # 1. Overview
 
-This project uses a **ResNet18 transfer learning model** trained on the PlantVillage dataset to classify plant diseases. It has been extended into a complete system with:
+This project uses a **ResNet18 transfer learning model** trained on the PlantVillage dataset to classify plant diseases across multiple crop categories.
 
-* Fully implemented FastAPI backend (no script reuse)
-* React SPA frontend with routing
-* Image upload + prediction
-* Training and evaluation APIs
-* Confusion matrix visualization (image rendering)
+The system has evolved into a production-oriented full-stack platform featuring:
+
+* FastAPI backend with modular ML services
+* React SPA frontend with responsive dashboard UI
+* Disease prediction with confidence scoring
+* Localized remedy recommendations
+* Multilingual interface support
+* Light/Dark accessibility themes
+* Training and evaluation pipelines
+* Confusion matrix visualization
+* Low-confidence expert escalation workflow
 
 ---
 
@@ -21,100 +27,225 @@ This project uses a **ResNet18 transfer learning model** trained on the PlantVil
 ## Machine Learning
 
 * Transfer learning using ResNet18
-* 15-class classification
-* Train / Evaluate / Predict pipelines
-* Metrics: accuracy, precision, recall, F1
+* PlantVillage dataset integration
+* Multi-class disease classification
+* Train / Evaluate / Detect workflows
+* Accuracy, Precision, Recall, and F1 metrics
+* GPU-aware model execution support
 
 ## Backend (FastAPI)
 
-* Re-implemented ML pipeline (no subprocess usage)
-* `/train` → Train model
-* `/evaluate` → Evaluate model + confusion matrix image
-* `/predict` → Predict disease + confidence + top-k
+* Fully modular service architecture
+* Native ML inference pipeline (no subprocess execution)
+* Structured API responses
+* Remedy lookup system using JSON-based localized datasets
+* Confidence threshold engine for uncertain predictions
+* REST endpoints for training, evaluation, and prediction
 
-## Frontend (React SPA)
+### API Endpoints
 
-* Multi-page routing (Train / Evaluate / Predict)
-* Centered responsive UI
-* Dark mode (default)
-* Minimal design with orange primary theme
-* Image preview + prediction results
-* Confusion matrix full-width visualization
+* `POST /train` → Train model
+* `GET /evaluate` → Evaluate trained model
+* `POST /detect` → Detect plant disease from uploaded image
+* `GET /` → API health check
+
+## Frontend (React + Vite)
+
+* Responsive dashboard interface
+* React Router SPA navigation
+* Image upload with preview support
+* Confidence visualization components
+* Detection result cards
+* Dynamic treatment recommendation UI
+* Kannada, Hindi, and English language support
+* Light mode and dark mode theme system
+* Mobile-friendly layout and typography
+
+## Farmer Advisory Enhancements
+
+* Multilingual treatment recommendations
+* Organic, Chemical, and Cultural remedy categorization
+* Low-confidence diagnostic warning system
+* Expert escalation workflow for uncertain predictions
+* Outdoor-readable UI theme support
 
 ---
 
 # 3. Dataset
 
-The PlantVillage dataset contains 15 classes:
+The model is trained using the **PlantVillage dataset**.
 
-* Pepper: bacterial spot, healthy
-* Potato: early blight, late blight, healthy
-* Tomato: multiple diseases + healthy
+Supported disease categories include:
 
----
+* Pepper Bell
 
-# 4. Project Structure
+  * Bacterial Spot
+  * Healthy
 
-```
-project/
-├── backend/
-│   ├── main.py
-│   ├── config.py
-│   ├── models/
-│   ├── services/
-│   ├── utils/
-│   └── routes/
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── api/
-│   │   └── styles/
-│
-├── PlantVillage/
-├── plant_disease_model.pth
-```
+* Potato
+
+  * Early Blight
+  * Late Blight
+  * Healthy
+
+* Tomato
+
+  * Bacterial Spot
+  * Early Blight
+  * Late Blight
+  * Leaf Mold
+  * Septoria Leaf Spot
+  * Spider Mites
+  * Target Spot
+  * Mosaic Virus
+  * Yellow Leaf Curl Virus
+  * Healthy
 
 ---
 
-# 5. Requirements
+# 4. Tech Stack
 
 ## Backend
 
-* Python >= 3.10
-* PyTorch
-* torchvision
+* Python 3.13
 * FastAPI
-* matplotlib, seaborn, sklearn
+* PyTorch
+* TorchVision
+* TensorFlow
+* Scikit-learn
+* Matplotlib
+* Seaborn
+* Pillow
+* Uvicorn
 
 ## Frontend
 
-* Node.js >= 18
-* React + Vite
-* axios
-* react-router-dom
+* React
+* Vite
+* Axios
+* React Router DOM
+* Context API
+* CSS
 
 ---
 
-# 6. Setup Instructions
+# 5. Project Structure
 
-## Backend
+```text
+pranavkadagadakai-plant_disease_detection/
+├── README.md
+├── AGENTS.md
+│
+├── backend/
+│   ├── app.py
+│   ├── main.py
+│   ├── config.py
+│   ├── pyproject.toml
+│   ├── uv.lock
+│   ├── data/
+│   │   └── remedies.json
+│   ├── models/
+│   │   └── model_builder.py
+│   ├── routes/
+│   │   ├── detect.py
+│   │   ├── evaluate.py
+│   │   └── train.py
+│   ├── services/
+│   │   ├── detection_service.py
+│   │   ├── eval_service.py
+│   │   └── train_service.py
+│   └── utils/
+│       ├── dataset.py
+│       ├── label_normalizer.py
+│       ├── remedy_loader.py
+│       └── transforms.py
+│
+└── frontend/
+    ├── package.json
+    ├── vite.config.js
+    └── src/
+        ├── App.jsx
+        ├── main.jsx
+        ├── api/
+        │   └── api.js
+        ├── components/
+        │   ├── ConfidenceBar.jsx
+        │   ├── Detect.jsx
+        │   ├── DetectionResult.jsx
+        │   ├── Evaluate.jsx
+        │   ├── LanguageCard.jsx
+        │   ├── Navbar.jsx
+        │   ├── Train.jsx
+        │   └── TreatmentCard.jsx
+        ├── context/
+        │   ├── LanguageContext.jsx
+        │   └── ThemeContext.jsx
+        ├── i18n/
+        │   └── i18n.js
+        ├── locales/
+        │   ├── en.json
+        │   ├── hi.json
+        │   └── kn.json
+        ├── pages/
+        │   └── Dashboard.jsx
+        └── styles/
+            └── app.css
+```
+
+---
+
+# 6. Installation
+
+## Clone Repository
+
+```bash
+git clone <repository-url>
+cd Plant_Disease_Detection
+```
+
+---
+
+# 7. Backend Setup
+
+## Create Environment
+
+```bash
+cd backend
+```
+
+Using uv:
+
+```bash
+uv sync
+```
+
+Or using pip:
 
 ```bash
 pip install -r requirements.txt
-uvicorn backend.main:app --reload
 ```
 
-Runs at:
+## Start Backend Server
 
+```bash
+uvicorn app:app --reload
 ```
+
+Backend runs at:
+
+```text
 http://localhost:8000
+```
+
+API documentation:
+
+```text
+http://localhost:8000/docs
 ```
 
 ---
 
-## Frontend
+# 8. Frontend Setup
 
 ```bash
 cd frontend
@@ -122,99 +253,238 @@ npm install
 npm run dev
 ```
 
-Runs at:
+Frontend runs at:
 
-```
+```text
 http://localhost:5173
 ```
 
 ---
 
-# 7. Usage
+# 9. Usage
 
-## Train
+## Train Model
 
-* UI → Train page → click Train
-* API → POST `/train`
+Frontend:
 
-## Evaluate
+* Open Train page
+* Start model training
+* Monitor metrics and training progress
 
-* UI → Evaluate page
-* Shows metrics + confusion matrix image
-* API → GET `/evaluate`
+API:
 
-## Predict
-
-* UI → Upload image → Predict
-* API → POST `/predict`
+```http
+POST /train
+```
 
 ---
 
-# 8. API Responses
+## Evaluate Model
 
-## Train
+Frontend:
 
-* loss, accuracy, curves
+* Open Evaluate page
+* View metrics and confusion matrix visualization
 
-## Evaluate
+API:
 
-* accuracy, precision, recall, f1
-* confusion_matrix_image (base64)
+```http
+GET /evaluate
+```
 
-## Predict
+Returns:
 
-* class_index
-* class_name
-* confidence
-* top_k predictions
-
----
-
-# 9. Model Architecture
-
-* ResNet18 (ImageNet pretrained)
-* Frozen backbone
-* Custom classifier head
-* CrossEntropyLoss + Adam
+* Accuracy
+* Precision
+* Recall
+* F1 Score
+* Confusion Matrix Image
 
 ---
 
-# 10. UI Highlights
+## Detect Disease
 
-* Dark mode default
-* Orange primary actions
-* Green for success states
-* Clean card-based layout
-* Full-width confusion matrix visualization
+Frontend:
 
----
+* Upload a plant leaf image
+* Run disease detection
+* View confidence score and treatment recommendations
 
-# 11. Engineering Decisions
+API:
 
-* Reimplemented backend logic instead of reusing scripts
-* Global model loading for performance
-* Base64 image transfer for confusion matrix (stateless)
-* React Router for multi-page navigation
+```http
+POST /detect
+```
 
----
+Returns:
 
-# 12. Known Limitations
-
-* Training is synchronous (blocking)
-* No persistent dataset split
-* Confusion matrix may be large for many classes
+* Predicted disease
+* Confidence score
+* Localized display names
+* Treatment recommendations
+* Low-confidence diagnostic flag
 
 ---
 
-# 13. Future Improvements
+# 10. Detection Workflow
 
-* Async training (Celery / background tasks)
-* Interactive confusion matrix (Plotly)
-* Model versioning
-* Deployment (Docker + cloud)
+```text
+Leaf Image Upload
+        ↓
+FastAPI Detection Endpoint
+        ↓
+PyTorch Model Inference
+        ↓
+Confidence Threshold Validation
+        ↓
+Remedy Database Lookup
+        ↓
+Localized Response Generation
+        ↓
+Frontend Visualization
+```
 
 ---
 
-# 14. License
+# 11. Localization Support
 
-[Add your license information here]
+The application supports:
+
+* English
+* हिंदी (Hindi)
+* ಕನ್ನಡ (Kannada)
+
+Localized support includes:
+
+* UI labels
+* Detection outputs
+* Remedy recommendations
+* Advisory messaging
+
+---
+
+# 12. Theme System
+
+The frontend includes dual-theme support:
+
+## Dark Mode
+
+* Default desktop-friendly theme
+* Reduced eye strain
+
+## Light / Outdoor Mode
+
+* High-contrast accessibility mode
+* Improved sunlight readability for field usage
+
+---
+
+# 13. Remedy Recommendation System
+
+The backend uses `backend/data/remedies.json` to provide structured disease treatment recommendations.
+
+Each disease entry contains:
+
+* Localized display names
+* Organic remedies
+* Chemical remedies
+* Cultural farming practices
+
+Fallback recommendations are automatically returned if a disease mapping is unavailable.
+
+---
+
+# 14. Confidence Threshold & Expert Workflow
+
+The system applies a confidence threshold to identify uncertain predictions.
+
+## High Confidence
+
+* Standard detection results displayed
+* Treatment recommendations shown normally
+
+## Low Confidence
+
+If prediction confidence falls below the configured threshold:
+
+* Warning state is triggered
+* Expert advisory workflow becomes available
+* Users are encouraged to seek agricultural verification
+
+This reduces the risk of unsafe treatment recommendations from uncertain predictions.
+
+---
+
+# 15. Model Architecture
+
+The project uses:
+
+* ResNet18 transfer learning
+* Custom classification head
+* Standardized image transforms
+* Torch device-aware loading
+
+Inference pipeline includes:
+
+* Resize
+* Tensor conversion
+* Normalization
+* Softmax confidence scoring
+
+---
+
+# 16. Development Notes
+
+## Recommended Tools
+
+### Linting & Formatting
+
+```bash
+uv add --dev ruff
+uv run ruff check .
+uv run ruff format .
+```
+
+### Type Checking
+
+```bash
+uv add --dev mypy
+uv run mypy .
+```
+
+### Testing
+
+```bash
+uv add --dev pytest pytest-cov
+uv run pytest --cov=. tests/
+```
+
+---
+
+# 17. Future Improvements
+
+Potential enhancements:
+
+* Real-time camera detection
+* Expert consultation integration
+* Cloud deployment pipeline
+* Additional crop support
+* Offline mobile inference
+* Dataset expansion
+* Model explainability visualizations
+
+---
+
+# 18. License
+
+This project is intended for educational and research purposes.
+
+---
+
+# 19. Acknowledgements
+
+* PlantVillage Dataset
+* PyTorch
+* FastAPI
+* React
+* Scikit-learn
