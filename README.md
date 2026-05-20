@@ -60,6 +60,10 @@ The system has evolved into a production-oriented full-stack platform featuring:
 * Kannada, Hindi, and English language support
 * Light mode and dark mode theme system
 * Mobile-friendly layout and typography
+* Dedicated landing/home page with responsive hero section
+* CTA navigation to disease detection workflow
+* Feature overview cards on homepage
+* Clickable home branding in navbar
 
 ## Farmer Advisory Enhancements
 
@@ -173,6 +177,7 @@ pranavkadagadakai-plant_disease_detection/
         │   ├── Detect.jsx
         │   ├── DetectionResult.jsx
         │   ├── Evaluate.jsx
+        │   ├── Home.jsx
         │   ├── LanguageCard.jsx
         │   ├── Navbar.jsx
         │   ├── Train.jsx
@@ -262,6 +267,15 @@ http://localhost:5173
 ---
 
 # 9. Usage
+
+## Home / Landing Page
+
+Frontend:
+
+* Responsive landing page with project overview
+* Quick navigation to disease detection workflow
+* Feature highlights and multilingual support overview
+* Theme-aware UI compatible with light and dark modes
 
 ## Train Model
 
@@ -360,6 +374,9 @@ Localized support includes:
 * Detection outputs
 * Remedy recommendations
 * Advisory messaging
+* Landing page content
+* Homepage feature descriptions
+* Navigation labels
 
 ---
 
@@ -371,11 +388,13 @@ The frontend includes dual-theme support:
 
 * Default desktop-friendly theme
 * Reduced eye strain
+* Modern landing page optimized for dashboard experience
 
 ## Light / Outdoor Mode
 
 * High-contrast accessibility mode
 * Improved sunlight readability for field usage
+* Responsive homepage readability improvements
 
 ---
 
@@ -472,6 +491,9 @@ Potential enhancements:
 * Offline mobile inference
 * Dataset expansion
 * Model explainability visualizations
+* Interactive analytics dashboard on homepage
+* Animated onboarding and detection walkthroughs
+* Farmer education and disease awareness modules
 
 ---
 
