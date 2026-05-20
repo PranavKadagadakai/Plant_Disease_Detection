@@ -1,6 +1,19 @@
 {
   "appTitle": "Plant Disease Detection",
 
+  "home": "Home",
+  "heroBadge": "AI Powered Plant Health Analysis",
+  "homeTitle": "Detect Plant Diseases Instantly",
+  "homeDescription": "Upload crop images and use deep learning powered analysis to identify diseases, review predictions, and explore treatment recommendations in multiple languages.",
+  "startDetection": "Start Detection",
+  "viewEvaluation": "View Evaluation",
+  "featureOneTitle": "Fast Detection",
+  "featureOneDescription": "Upload an image and receive predictions with confidence scores in seconds.",
+  "featureTwoTitle": "Treatment Guidance",
+  "featureTwoDescription": "Get organic, chemical, and cultural treatment recommendations for detected diseases.",
+  "featureThreeTitle": "Multilingual Support",
+  "featureThreeDescription": "Use the platform in English, हिन्दी, and ಕನ್ನಡ for better accessibility.",
+
   "train": "Train",
   "evaluate": "Evaluate",
   "detect": "Detect",

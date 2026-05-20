@@ -25,7 +25,11 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar-top">
-        <h2>{t("appTitle")}</h2>
+        <h2 className="app-title">
+          <Link to="/" className="title-link">
+            {t("appTitle")}
+          </Link>
+        </h2>
 
         <div className="settings-container">
           <button className="settings-btn" onClick={() => setOpen(!open)}>
@@ -69,6 +73,10 @@ function Navbar() {
       </div>
 
       <div className="nav-links">
+        <Link className={isActive("/") ? "active" : ""} to="/">
+          {t("home")}
+        </Link>
+
         <Link className={isActive("/train") ? "active" : ""} to="/train">
           {t("train")}
         </Link>
